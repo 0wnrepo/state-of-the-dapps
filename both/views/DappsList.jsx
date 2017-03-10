@@ -8,7 +8,8 @@ var chunkSize = 24 // must be % 12 == 0, how many blocks are added
 var blocksInAdvance = 6 // if the browser is this close to the bottom we will load more
 
 if (typeof Session !== 'undefined') {
-  Session.set('searchQuery', '')
+  var locHash = this.location.hash !== '' ? this.location.hash.substr(1) : ''
+  Session.set('searchQuery', locHash)
   Session.set('searchSortDirection', App.defaultSortDirection)
   Session.set('searchSortType', App.defaultSortType)
   Session.set('lastResult', App.initialBatchSize)
