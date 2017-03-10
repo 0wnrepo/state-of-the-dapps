@@ -10,7 +10,7 @@ App.SearchBox = React.createClass({
         <div className='search-area'>
           <div className='input-field col s12'>
             <i className='fa fa-fw fa-search prefix'></i>
-            <input ref='searchBox' onKeyUp={this.handleKeyup} type='text' className='search-box'></input>
+            <input ref='searchBox' onKeyUp={this.handleKeyup} type='text' className='search-box' defaultValue={this.props.locHash}></input>
             <label>Search</label>
           </div>
 

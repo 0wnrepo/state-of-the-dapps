@@ -127,7 +127,7 @@ App.DappsList = React.createClass({
             <h1>State of the Ðapps</h1>
           </header>
           <section>
-            < App.SearchBox />
+            < App.SearchBox locHash={locHash}/>
           </section>
         </div>
         < App.InfoModal />
